@@ -1,0 +1,148 @@
+.body{
+    font-family:Arial, Helvetica, sans-serif
+}
+
+.wd-search-setting-bar{
+    display: flex;
+}
+
+#wd-search-field{
+    float:left;
+    width: 80%;
+    border-radius: 20px;
+    margin: 10px 5px 20px 20px;
+    height: 50px;
+    background-color: lightgrey;
+    color: darkgray;
+    padding-left: 20px;
+}
+
+.wd-css-container{
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    border-radius: 10px;
+    border:1px;
+    border-style: solid;
+    border-color: lightgray;
+    
+}
+.wd-magnify-glass{
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#wd-gear-icon{
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+.wd-float-left{
+    float:left
+}
+
+.wd-topic-list{
+    display: flex;
+    height: 40px;
+    list-style: none;
+    justify-content: left;
+    align-items:flex-start;
+    text-align:center;
+    padding-left: 0px;
+    padding-bottom:0px;
+    margin-bottom:0px;
+}
+
+.wd-topic-list li{
+    width: 100px;
+    height: 40px;
+    justify-content: left;
+    align-items: left;  
+    vertical-align: middle; 
+    text-align: center;
+    padding:0%
+}
+
+.wd-topic{
+    padding-bottom: 19px
+}
+
+.wd-selected{
+    border-top:0px;
+    border-left:0px;
+    border-right:0px;
+    border-bottom:5px;
+    border-style:solid;
+    border-color:blue;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+
+
+.wd-text-overlay-image-container{
+    position: relative;
+    width: 100%;
+    border:1px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: lightgray;
+}
+
+.wd-overlaid-heading{
+    position: absolute;
+    top: 50%;
+    padding: px;
+    z-index: 2;
+    font-size: calc(4vw + 10px);
+    color:white;
+    
+}
+
+.wd-text-overlay-image-container .wd-explore-image{
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.wd-tuit-list{
+    list-style: none;
+}
+
+.wd-tuit-list-item{
+    width: 100%;
+    height: 75px;
+    padding-left: 0px;
+    align-items: center;
+    vertical-align:middle;
+    padding-bottom:10px;
+    padding-top: 10px;
+    
+}
+.wd-tuit-category{
+    color:grey;
+    margin-bottom:20px;
+
+}
+
+.wd-tuit-heading{
+    font-size:x-large;
+    margin-top:20px;
+    margin-bottom:20px;
+    color:black;
+
+}
+
+.wd-tuit-count{
+    margin-top:20px;
+    color:grey;
+
+}
+
+.wd-float-right{
+    float:right;
+    padding-right:30px;
+}
+
