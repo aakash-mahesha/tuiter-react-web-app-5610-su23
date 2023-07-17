@@ -1,0 +1,158 @@
+body{
+    background-color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    color:black;
+}
+
+.md-bookmarks-left-border{
+    width: 10%;
+    font-size:larger;
+    padding-right: 20px;
+    text-align: center;
+    vertical-align: top;
+    padding-top: 20px;
+}
+
+.wd-bookmarks-main-content{
+    width: 90%;
+    position: relative;
+
+}
+
+.wd-float-left{
+    float: left;
+
+}
+
+.wd-float-right{
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.wd-tuiter-profile-pic{
+    position: relative;
+    vertical-align: top;
+    width: 60px;
+    height: 60px;
+    border-radius: 50% 50% 50% 50%;
+    margin-left: 100px;
+    margin-right: 0px;
+    margin-bottom: 30px;
+    margin-top: 0px;
+}
+
+.wd-bookmark-content-header{
+    position: absolute;
+    top: 20px;
+    width: 100%;
+
+}
+
+.wd-bookmark-tuit-info{
+    position: relative;
+    font-size: larger;
+
+}
+
+.wd-bookmark-tuit-menu-icon{
+    position: absolute;
+    right:10px;
+    bottom: 20px;
+    color: lightslategray;
+
+}
+
+.wd-bookmark-account-handle-time-stamp{
+    color:lightslategray;
+}
+
+
+.wd-bookmark-tuit-card{
+    position: relative;
+    border: dotted 1px grey;
+    height: 500px;
+    width : 500px;
+    margin-bottom: 10px;
+    margin-top : 125px;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.wd-bookmark-tuit-image{
+    position:absolute;
+    width: 100%;
+    height:70%;
+    border-radius: 20px 20px 0px 0px;
+
+}
+
+.wd-bookmark-tuit-card-info{
+    position:absolute;
+    padding-left: 10px;
+    top: 375px;
+    width : 480px;
+    height : 25%;
+    font-size: large;
+    padding-bottom: 30px;
+}
+
+
+.wd-bookmark-tuit-card-info > a {
+    text-decoration:none;
+    color: black;
+    margin-bottom: 2px;
+}
+
+.wd-bookmark-tuit-card-info > h3 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.wd-bookmark-tuit-card-info > span {
+    margin-top: 2px;
+    color: grey;
+}  
+
+.wd-bookmark-tuit-engagement-bar{
+    position: relative; 
+}
+
+.wd-bookmark-tuit-engagement-list{
+    position:relative;
+    right: 40px;
+    display: flex;
+    list-style: none;
+    justify-content: left;
+}
+
+.wd-bookmark-tuit-engagement-list > li {
+    margin-right: 50px;
+}
+.wd-bookmark-tuit-engagement-list > li > .wd-bookmark-tuit-icon {
+    margin-right: 5px;
+}
+
+.wd-bookmark-tuit-inlink{
+    color: #0892fd ;
+}
+
+.wd-bookmark-tuit-article-user-handle{
+    color: #0892fd ;
+}
+
+.wd-icon-selected{
+    color:#d62976 ;
+}
+
+table {
+    border-collapse: collapse; 
+    width: 100%; 
+}
+
+tr{
+    border-bottom: 1px solid lightgray; 
+}
+
+table > thead > tr{
+    border: solid 0px black;
+}
