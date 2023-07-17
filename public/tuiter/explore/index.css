@@ -4,6 +4,7 @@ body{
 
 .wd-search-setting-bar{
     display: flex;
+    position:relative;
 }
 
 #wd-search-field{
@@ -14,23 +15,26 @@ body{
     height: 50px;
     background-color: lightgrey;
     color: darkgray;
-    padding-left: 20px;
+    padding-left: 60px;
 }
 
 .wd-css-container{
     margin-right: auto;
     margin-left: auto;
     width: 100%;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     border:1px;
     border-style: solid;
     border-color: lightgray;
     
 }
 .wd-magnify-glass{
+    position:absolute;
     font-size: 30px;
     margin-top: 10px;
     margin-bottom: 20px;
+    left: 30px;
+    top: 2px;
 }
 
 #wd-gear-icon{
@@ -85,15 +89,15 @@ body{
     position: relative;
     width: 100%;
     border:1px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     border-style: solid;
     border-color: lightgray;
 }
 
 .wd-overlaid-heading{
     position: absolute;
-    top: 50%;
-    padding: px;
+    top: 80%;
+    padding: 2px;
     z-index: 2;
     font-size: calc(4vw + 10px);
     color:white;

@@ -54,6 +54,10 @@ body{
     font-size: larger;
 
 }
+.wd-bookmark-tuit-caption{
+    width: 70%;
+    height: 100px;
+}
 
 .wd-bookmark-tuit-menu-icon{
     position: absolute;
@@ -74,7 +78,7 @@ body{
     height: 500px;
     width : 500px;
     margin-bottom: 10px;
-    margin-top : 125px;
+    margin-top : 175px;
     border-radius: 20px 20px 20px 20px;
 }
 
@@ -149,10 +153,10 @@ table {
     width: 100%; 
 }
 
-tr{
-    border-bottom: 1px solid lightgray; 
+table > tbody{
+    border: solig 1px lightgray;
 }
 
-table > thead > tr{
-    border: solid 0px black;
+table> tbody> tr{
+    border: 1px solid lightgray;
 }
