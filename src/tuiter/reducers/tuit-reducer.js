@@ -20,10 +20,10 @@ const templateTuit = {
 
 const tuitsSlice = createSlice({
  name: "tuits",
- initialState: tuitsArray,
+ initialState: {tuits:tuitsArray},
  reducers:{
     tuitLikeClick(state,action){
-        let exstTuit = state.find((tuit) => tuit._id ===action.payload)
+        let exstTuit = state.tuits.find((tuit) => tuit._id ===action.payload)
         console.log(current(exstTuit))
         if(exstTuit.liked){
             exstTuit.likes -= 1
@@ -38,13 +38,11 @@ const tuitsSlice = createSlice({
         
     },
     createTuit(state, action) {
-        state.unshift({
+        state.tuits.unshift({
         ...action.payload,
         ...templateTuit,
         _id: (new Date()).getTime(),
         })
-
-        console.log(current(state))
     },
 
     deleteTuit(state, action) {

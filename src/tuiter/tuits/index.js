@@ -3,7 +3,7 @@ import TuitItem from "./tuit-item"
 import React from "react"
 
 const TuitList = ()=>{
-    const tuitsArray = useSelector((state) => state.tuits);
+    const tuitsArray = useSelector((state) => state.tuits.tuits);
     
     return(
         

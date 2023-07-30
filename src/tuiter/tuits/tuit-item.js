@@ -32,19 +32,26 @@ import { useDispatch } from "react-redux";
     return (
         <li className="list-group-item">
             <div className="row w-100 mt-2 ps-2 pt-2">
-                <div className="col-2 text-center ps-0 align-items-start">
+                <div className="col-2 text-center ps-0 pt-3 align-items-start">
                     <img className="img rounded-circle" height={50} width ={50} src={`/images/${tuit.image}`}/>
                 </div>
                 <div className="col-10 pe-2 ps-0 ms-0">
                     <div>
-                    <i className=""
+                        <div className="wd-tuit-close-btn">
+                            <i className="btn-close float-end"
                         onClick={() => deleteTuitHandler(tuit._id)}></i>
-                        <span><b>{tuit.userName}</b> </span>
-                        <span><FontAwesomeIcon icon={faCheckCircle} style={{color: "#1c6efd",}} /> </span>
-                        <span>{tuit.handle} . </span>
-                        <span>{tuit.time} </span>
+                        </div>
+                        <div className="wd-tuit-item p-1">
+                            <span><b>{tuit.userName}</b> </span>
+                            <span><FontAwesomeIcon icon={faCheckCircle} style={{color: "#1c6efd",}} /> </span>
+                            <span>{tuit.handle} . </span>
+                            <span>{tuit.time} </span>    
+                        </div>
+                        <div className="wd-tuit-content p-1">
+                            {tuit.tuit}
+                        </div>
                     </div>
-                    {tuit.tuit}
+                        
                     <div>
                         <TuitStats tuitId = {tuit._id} likes = {tuit.likes} liked = {tuit.liked} replies = {tuit.replies}  retuits={tuit.retuits}/>
                     </div>
