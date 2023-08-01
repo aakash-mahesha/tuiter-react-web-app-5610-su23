@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComment,faHeart as faHeartOutline } from "@fortawesome/free-regular-svg-icons";
-import { faDownload, faHeart as faHeartSolid } from "@fortawesome/free-solid-svg-icons";
+import { faUpload, faHeart as faHeartSolid } from "@fortawesome/free-solid-svg-icons";
 import { faRetweet } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch } from "react-redux";
 import {tuitLikeClick} from '../reducers/tuit-reducer'
@@ -33,7 +33,7 @@ const TuitStats = ( {tuitId, likes, liked, replies, retuits}
               
             </div>
             <div className="wd-stat d-flex align-items-center">
-              <button className="btn wd-download-btn "><span className="wd-stat-icon-and-value"><FontAwesomeIcon icon = {faDownload} /></span></button>
+              <button className="btn wd-download-btn "><span className="wd-stat-icon-and-value"><FontAwesomeIcon icon = {faUpload} /></span></button>
             </div>
           </div>
         );
