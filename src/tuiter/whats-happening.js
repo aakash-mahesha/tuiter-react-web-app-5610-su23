@@ -5,7 +5,8 @@ import { MdFormatListBulletedAdd } from 'react-icons/md'
 import { TbCalendarStats } from 'react-icons/tb'
 import {CiLocationOn} from 'react-icons/ci'
 import {BiBold, BiItalic} from 'react-icons/bi'
-import { createTuit } from "./reducers/tuit-reducer";
+// import { createTuit } from "./reducers/tuit-reducer";
+import { createTuitThunk } from "./services/tuits-thunks";
 import {useDispatch} from "react-redux";
 
 const WhatsHappening = () => {
@@ -15,7 +16,8 @@ const WhatsHappening = () => {
         const newTuit = {
             tuit: whatsHappening
             }
-            dispatch(createTuit(newTuit));
+            // dispatch(createTuit(newTuit));
+            dispatch(createTuitThunk(newTuit))
             setWhatsHappening("");
     }
     return (

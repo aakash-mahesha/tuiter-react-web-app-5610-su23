@@ -5,31 +5,34 @@ import { faUpload, faHeart as faHeartSolid } from "@fortawesome/free-solid-svg-i
 import { faRetweet } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch } from "react-redux";
 import {tuitLikeClick} from '../reducers/tuit-reducer'
+import { updateTuitThunk } from "../services/tuits-thunks";
 import './index.css'
-const TuitStats = ( {tuitId, likes, liked, replies, retuits}
+// const TuitStats = ( {tuitId, likes, liked, replies, retuits}
+const TuitStats = ({tuit}
     
 ) => {
   const dispatch = useDispatch();
 
   const handleClickLike = () =>{
-    dispatch(tuitLikeClick(tuitId))
+    // dispatch(tuitLikeClick(tuitId))
+    dispatch(updateTuitThunk({...tuit, likes:tuit.likes+1}))
   }
   return(
       
           <div className="wd-tuiter-stats d-flex justify-content-evenly rounded">
             <div className="wd-stat d-flex align-items-center">
-              <button className="btn wd-replies-btn"><span className="stat-icon-and-value"><FontAwesomeIcon icon={faComment}/> {replies}</span></button>
+              <button className="btn wd-replies-btn"><span className="stat-icon-and-value"><FontAwesomeIcon icon={faComment}/> {tuit.replies}</span></button>
             </div>
             <div className="wd-stat d-flex align-items-center">
-              <button className="btn wd-retweet-btn "><span className="wd-stat-icon-and-value"><FontAwesomeIcon icon={faRetweet}/> {retuits}</span></button>
+              <button className="btn wd-retweet-btn "><span className="wd-stat-icon-and-value"><FontAwesomeIcon icon={faRetweet}/> {tuit.retuits}</span></button>
             </div>
             <div className="wd-stat d-flex align-items-center">
               <button className="btn wd-likes-btn " onClick={handleClickLike}><span className="wd-stat-icon-and-value">
-              {liked ? (
+              {tuit.liked ? (
                 <FontAwesomeIcon icon={faHeartSolid} className="liked" ></FontAwesomeIcon>
               ): (
                 <FontAwesomeIcon icon={faHeartOutline}></FontAwesomeIcon>
-              )} {likes}</span></button>
+              )} {tuit.likes}</span></button>
               
             </div>
             <div className="wd-stat d-flex align-items-center">
