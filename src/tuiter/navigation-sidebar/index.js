@@ -9,8 +9,10 @@ import { faListAlt } from "@fortawesome/free-regular-svg-icons";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { faEllipsisH } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useSelector } from "react-redux";
 const NavigationSidebar = () => {
     const { pathname } = useLocation();
+    const { currentUser } = useSelector((state) => state.user);
     const [ignore, tuiter, active] = pathname.split("/");
     const links = ["home", "explore", "notifications", "messages", "bookmarks", "lists", "profile", "more"];
 
@@ -34,6 +36,9 @@ const NavigationSidebar = () => {
                     </div>
                 </Link>
             )}
+            {!currentUser && <Link className="list-group" to="/tuiter/login"> Login </Link>}
+            {!currentUser && <Link className="list-group" to="/tuiter/register">Register</Link>}
+            { currentUser && <Link className="list-group" to="/tuiter/profile"> Profile </Link>}
         </div>
     );
 };

@@ -36,7 +36,7 @@ const tuitsSlice = createSlice({
     [createTuitThunk.fulfilled]:
         (state, { payload }) => {
         state.loading = false
-        state.tuits.push(payload)
+        state.tuits.push({...templateTuit,...payload})
     },
     [deleteTuitThunk.fulfilled]:
         (state, {payload}) =>{
@@ -60,35 +60,7 @@ const tuitsSlice = createSlice({
         }
     },
  reducers:{
-    // tuitLikeClick(state,action){
-    //     let exstTuit = state.tuits.find((tuit) => tuit._id ===action.payload)
-    //     console.log(current(exstTuit))
-    //     if(exstTuit.liked){
-    //         exstTuit.likes -= 1
-    //     }
-    //     else{
-    //         exstTuit.likes += 1
-    //     }
-    //     exstTuit.liked = !exstTuit.liked
-       
-    //     console.log(current(exstTuit))
-
-        
-    // },
-    // createTuit(state, action) {
-    //     state.tuits.unshift({
-    //     ...action.payload,
-    //     ...templateTuit,
-    //     _id: (new Date()).getTime(),
-    //     })
-    // },
-
-    // deleteTuit(state, action) {
-    //     const index = state.tuits
-    //     .findIndex(tuit =>
-    //     tuit._id === action.payload);
-    //     state.tuits.splice(index, 1);
-    // },
+    
  }
 });
 
