@@ -27,7 +27,7 @@ return (
                 <div className="col-2">
                     <NavigationSidebar />
                 </div>
-                <div className="col-7">
+                <div className="col-10 col-sm-10 col-md-10 col-lg-7 col-xl-7 col-xxl-7">
                     <Routes>
                         <Route path="/home" element={<HomeScreen />} />
                         <Route path="/explore" element={<ExploreScreen />} />
@@ -38,7 +38,7 @@ return (
                         <Route path="/profile" element={<ProfileScreen />} />
                     </Routes>
                 </div>
-                <div className="col-3">
+                <div className="col-3 d-none d-xl-block">
                     <WhoToFollowList />
                 </div>
             </div>

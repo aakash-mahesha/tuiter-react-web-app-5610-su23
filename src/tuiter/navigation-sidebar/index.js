@@ -32,7 +32,7 @@ const NavigationSidebar = () => {
                 <Link to={`/tuiter/${link}`} className={`list-group-item text-capitalize ${active === link ? "active" : ""}`}>
                     <div className="row">
                         <div className="col-2"><FontAwesomeIcon icon={iconMap[link]} className="me-3" /> </div>
-                        <div className="col-10">{link}</div>
+                        <div className="col-10 d-none d-xl-block">{link}</div>
                     </div>
                 </Link>
             )}

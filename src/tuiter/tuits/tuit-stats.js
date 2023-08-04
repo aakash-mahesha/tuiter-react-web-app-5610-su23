@@ -25,58 +25,77 @@ const TuitStats = ({tuit}
     dispatch(updateTuitThunk({...tuit, dislikes:tuit.dislikes+1}))
   }
   return(
-      
-          // <div className="wd-tuiter-stats d-flex justify-content-evenly rounded">
-          //   <div className="wd-stat d-flex align-items-center">
-          //     <button className="btn wd-replies-btn"><span className="stat-icon-and-value"><FontAwesomeIcon icon={faComment}/> {tuit.replies}</span></button>
-          //   </div>
-          //   <div className="wd-stat d-flex align-items-center">
-          //     <button className="btn wd-retweet-btn "><span className="wd-stat-icon-and-value"><FontAwesomeIcon icon={faRetweet}/> {tuit.retuits}</span></button>
-          //   </div>
-          //   <div className="wd-stat d-flex align-items-center">
-          //     <button className="btn wd-likes-btn " onClick={handleClickLike}><span className="wd-stat-icon-and-value">
-          //     {tuit.liked ? (
-          //       <FontAwesomeIcon icon={faHeartSolid} className="liked" ></FontAwesomeIcon>
-          //     ): (
-          //       <FontAwesomeIcon icon={faHeartOutline}></FontAwesomeIcon>
-          //     )} {tuit.likes}</span></button> 
-          //   </div>
-          //   <div className="wd-stat d-flex align-items-center">
-          //     <button className="btn wd-dislike-btn" onClick={handleClickDislike}><span className="wd-stat-icon-and-value"><FontAwesomeIcon icon={faThumbsDown}></FontAwesomeIcon> {tuit.dislikes}</span></button>
-          //   </div> 
-          //   <div className="wd-stat d-flex align-items-center">
-          //     <button className="btn wd-download-btn "><span className="wd-stat-icon-and-value"><FontAwesomeIcon icon = {faUpload} /></span></button>
-          //   </div>
-          // </div>
           <div className="row">
-            <div className="col">
-              <div className="wd-stat align-items-center">
-                <button className="btn wd-replies-btn"><span className="stat-icon-and-value"><FontAwesomeIcon icon={faComment}/> {tuit.replies}</span></button>
+            <div className="col-2">
+              <div className="wd-stat align-items-center"> 
+                <button className="btn wd-replies-btn">
+                  <div className="row">
+                      <div className="col-6">
+                      <span className="stat-icon-and-value"><FontAwesomeIcon icon={faComment}/></span>
+                      </div>
+                      <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 ps-1">
+                      <span>{tuit.replies}</span>
+                      </div>  
+                  </div>  
+                </button>
               </div> 
            </div>
-           <div className="col">
+           <div className="col-2">
             < div className="wd-stat align-items-center">
-                <button className="btn wd-retweet-btn "><span className="wd-stat-icon-and-value"><FontAwesomeIcon icon={faRetweet}/> {tuit.retuits}</span></button>
+                <button className="btn wd-retweet-btn">
+                  <div className="row">
+                    <div className="col-6">
+                      <span className="stat-icon-and-value"><FontAwesomeIcon icon={faRetweet}/> </span>                    
+                    </div>
+                    <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 ps-1">
+                      <span>{tuit.retuits}</span>
+                    </div>
+                  </div>
+                </button>
               </div>
            </div>
-           <div className="col">
+           <div className="col-2">
             <div className="wd-stat align-items-center">
-              <button className="btn wd-likes-btn " onClick={handleClickLike}><span className="wd-stat-icon-and-value">
-                {tuit.liked ? (
-                  <FontAwesomeIcon icon={faHeartSolid} className="liked" ></FontAwesomeIcon>
-                ): (
-                  <FontAwesomeIcon icon={faHeartOutline}></FontAwesomeIcon>
-                )} {tuit.likes}</span></button> 
+              <button className="btn wd-likes-btn " onClick={handleClickLike}>
+                <div className="row">
+                  <div className="col-6">
+                    <span className="wd-stat-icon-and-value">
+                      {tuit.liked ? (
+                        <FontAwesomeIcon icon={faHeartSolid} className="liked" ></FontAwesomeIcon>
+                      ): (
+                        <FontAwesomeIcon icon={faHeartOutline}></FontAwesomeIcon>
+                      )}</span>
+                    </div>
+                    <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 ps-1">
+                      <span>{tuit.likes}</span>
+                    </div>  
+                </div>
+              </button> 
             </div>
            </div>
-           <div className="col">
+           <div className="col-2">
               <div className="wd-stat align-items-center">
-                <button className="btn wd-dislike-btn" onClick={handleClickDislike}><span className="wd-stat-icon-and-value"><FontAwesomeIcon icon={faThumbsDown}></FontAwesomeIcon> {tuit.dislikes}</span></button>
+                <button className="btn wd-dislike-btn" onClick={handleClickDislike}>
+                  <div className="row">
+                      <div className="col-6">
+                        <span className="stat-icon-and-value"><FontAwesomeIcon icon={faThumbsDown}/></span>                    
+                      </div>
+                      <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 ps-1">
+                        <span>{tuit.dislikes}</span>
+                      </div>
+                  </div>
+                </button>
               </div>
            </div>
-           <div className="col">
+           <div className="col-2">
               <div className="wd-stat align-items-center">
-                <button className="btn wd-download-btn "><span className="wd-stat-icon-and-value"><FontAwesomeIcon icon = {faUpload} /></span></button>
+                <button className="btn wd-upload-btn">
+                  <div className="row">
+                    <div className="col-12 ps-1">
+                      <span className="stat-icon-and-value"><FontAwesomeIcon icon={faUpload}/></span>                    
+                    </div>
+                  </div>
+                </button>     
               </div>
            </div>
           </div>
