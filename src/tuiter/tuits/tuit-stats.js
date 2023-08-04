@@ -15,7 +15,7 @@ const TuitStats = ({tuit}
 
   const handleClickLike = () =>{
     // dispatch(tuitLikeClick(tuitId))
-    dispatch(updateTuitThunk({...tuit, likes:tuit.likes+1}))
+    dispatch(updateTuitThunk({...tuit, likes:tuit.likes+1, liked:true}))
   }
 
   const handleClickDislike = () =>{
