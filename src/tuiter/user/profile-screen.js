@@ -35,7 +35,7 @@ function ProfileScreen() {
             <div>
                 <div>
                     <label>First Name</label>
-                    <input type="text" value={profile.firstname}
+                    <input type="text" value={profile.firstName}
                     onChange={(event) => {
                         const newProfile = {
                         ...profile, firstName: event.target.value,
