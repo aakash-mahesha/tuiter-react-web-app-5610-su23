@@ -14,14 +14,14 @@ import ProfileScreen from "./user/profile-screen";
 import LoginScreen from "./user/login-screen";
 import RegisterScreen from "./user/register-screen"
 import authReducer from "./reducers/auth-reducer";
-const store=configureStore(
-    {reducer:{who:whoReducer, tuits:tuitReducer, user:authReducer}}
-);
+// const store=configureStore(
+//     {reducer:{who:whoReducer, tuits:tuitReducer, user:authReducer}}
+// );
 
 function Tuiter() {
 return (
     <div>
-        <Provider store={store}>
+        {/* <Provider store={store}> */}
             <Nav />
             <div className="row">
                 <div className="col-2">
@@ -42,7 +42,7 @@ return (
                     <WhoToFollowList />
                 </div>
             </div>
-        </Provider>
+        {/* </Provider> */}
     </div>
 );
 }
