@@ -17,12 +17,12 @@ export const logout = async () => {
 
 export const profile = async () => {
     const response = await api.post(`${USERS_URL}/profile`);
-    // console.log('auth-service response')
-    // console.log(response.data)
     return response;
 };
 
 export const updateUser = async (user) => {
+    console.log(user)
+    console.log(`${USERS_URL}/${user._id}`)
     const response = await api.put(`${USERS_URL}/${user._id}`, user);
     return response.data;
 };

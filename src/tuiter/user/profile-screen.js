@@ -9,15 +9,6 @@ function ProfileScreen() {
     const navigate = useNavigate();
     const save = async () => { await dispatch(updateUserThunk(profile)); };
     
-    // useEffect(  async () => {
-    //     const  loadProfile = async () => {
-                
-    //         const payload = await dispatch(profileThunk());
-    //         setProfile(payload); 
-    //     };
-    //     await loadProfile();
-    // }, []);
-
     const loadProfile = async() => {
         const payload = await dispatch(profileThunk());
         setProfile(payload.payload)
@@ -27,7 +18,7 @@ function ProfileScreen() {
         loadProfile()
     }, [])
 
-    console.log(profile)
+    
     return ( 
         <div>
             <h1>Profile Screen</h1>
